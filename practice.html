@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice.css">
+    <!-- <script type="text/javascript" src="practice.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- THE FIRST GALLERY -->
+    <div class="gallery">
+        <img src="/assets/images/kari-shea-QfAX7_xjxm4-unsplash.jpg" title="TITLE 1">
+        <img src="/assets/images/pawel-czerwinski-trR9lzaDUY8-unsplash.jpg" title="TITLE 2">
+        <img src="/assets/images/pexels-georgina-escobar-10137566.jpg" title="TITLE 3">
+        <img src="/assets/images/pic07.jpg" title="TITLE 4">
+        <img src="/assets/images/repentand-seekchristjesus-pMhS-1SzOEc-unsplash.jpg" title="TITLE 5">
+        <img src="/assets/images/thisisengineering-raeng-8hgmG03spF4-unsplash.jpg" title="TITLE 6">
+      </div>
+
+      <!-- THE SECOND GALLERY W3 SCHOOLS -->
+
+
+      <h2 class="w3-center">Manual Slideshow</h2>
+
+      <div class="w3-content w3-display-container">
+        <img class="mySlides" src="/assets/images/kari-shea-QfAX7_xjxm4-unsplash.jpg" style="width:100%">
+        <img class="mySlides" src="/assets/images/pawel-czerwinski-trR9lzaDUY8-unsplash.jpg" style="width:100%">
+        <img class="mySlides" src="/assets/images/pexels-georgina-escobar-10137566.jpg" style="width:100%">
+        <img class="mySlides" src="/assets/images/pic07.jpg" style="width:100%">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+      
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
+
+
+<!---------------------------------------------------------------------------------------- 
+    IMAGE SLIDER 3 FROM BANNERBEAR.COM 
+------------------------------------------------------------------------------------------>
+
+
+<div class="slider">
+    <img id="img-1" src="img-1.jpg" alt="Image 1"/>
+    <img id="img-2" src="img-2.jpg" alt="Image 2"/>
+    <img id="img-3" src="img-3.jpg" alt="Image 3"/>
+  </div>
+  <div class="navigation-button">
+    <span class="dot active" onclick="changeSlide(0)"></span>
+    <span class="dot" onclick="changeSlide(1)"></span>
+    <span class="dot" onclick="changeSlide(2)"></span>
+  </div>
+
+
+</body>
+</html>
+
+

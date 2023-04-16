@@ -1,206 +1,92 @@
 body {
     background-color: black;
-    padding-top: 20px;
 }
 
-
-header {
-    background: var(--background);
-    text-align: center;
-    position: sticky;
-    z-index: 999;
-    width: 100%;
-    height: 100px;
-
-
-}
-
-.nav-toggle {
-    position: absolute !important;
-    top: -9999px !important;
-    left: -9999px !important;
-}
-
-
-
-.nav-toggle-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 1em;
-    height: 100%;
+/******************************************************************************** 
+simple responsive nav by chatgpt 
+**********************************************************************************/
+/* Navbar styles */
+.navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
 }
 
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    display: block;
-    background: grey;
-    height: 2px;
-    width: 2em;
-    border-radius: 2px;
-    position: relative;
+/* Logo styles */
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    content: '';
-    position: absolute;
+/* Navigation links styles */
+.nav-links {
+    display: flex;
 }
 
-.nav-toggle-label span::before {
-    bottom: 7px;
-}
-
-.nav-toggle-label span::after {
-    top: 7px;
-}
-
-.main-nav {
-    position: absolute;
-    text-align: left;
-    top: 100%;
-    left: 0;
-
-    background: var(--background);
-    width: 100%;
-    /* display: none; */
-    transform: scale(1, 0);
-    transform-origin: center;
-    transition: transform 400ms ease-in-out;
-}
-
-.main-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.main-nav .main-ul li {
-    margin-bottom: 1em;
-    margin-left: 1em;
-}
-
-.main-nav .main-ul li a {
-    color: white;
+.nav-links a {
+    color: #fff;
     text-decoration: none;
-    font-size: 1rem;
-    text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 150ms ease-in-out;
+    margin-right: 20px;
 }
 
-.main-nav .main-ul li a:hover {
-    color: green;
+/* Hamburger menu styles */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
 }
 
-.nav-toggle:checked~.main-nav {
-    transform: scale(1, 1);
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin-bottom: 5px;
 }
 
-.nav-toggle:checked~nav a {
-    opacity: 1;
-    transition: opacity 250ms ease-in-out 250ms;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 800px) {
-    .nav-toggle-label {
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .nav-links {
         display: none;
     }
 
-    header {
-        display: grid;
-        grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+    .nav-toggle {
+        display: block;
     }
+}
 
-
-    .logo {
-        grid-column: 2/ 3;
-        color: white;
-    }
-
-    .main-nav {
-        /*this adds edge support*/
-
-        position: relative;
-        text-align: left;
-        transition: none;
-        transform: scale(1, 1);
-        background: none;
-        top: initial;
-        left: initial;
-        /* Edge support end*/
-
-        grid-column: 3 / 4;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-    }
-
-    .main-nav .main-ul {
-        display: flex;
-
-
-    }
-
-    .main-nav .main-ul li {
-        margin-left: 3em;
-        margin-bottom: 0;
-
-    }
-
-    .main-nav .main-ul li a {
-        opacity: 1;
-        position: relative;
-        color: white;
-    }
-
-    /* **********************************************************************************
+/* **********************************************************************************
     page one start
     ********************************************************* */
 
-    .haunted-house-img {
-        display: block;
-        height: 200px;
-        width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
-    }
+.haunted-house-img {
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
 
-    .page-one {
+.page-one {
 
-        margin-top: 300px;
-        height: 600px;
-        border: 2px solid white;
-        clear: both;
-        width: 80%;
-        min-height: 50px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    margin-top: 300px;
+    height: 600px;
+    border: 2px solid white;
+    clear: both;
+    width: 80%;
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    /* @media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
         .page-one {
             height: 100px; */
-    /* adjust the height as needed */
-}
+/* adjust the height as needed */
+
 
 /* }
 
